@@ -3,6 +3,7 @@ import { PeliculasComponent } from './components/peliculas/peliculas.component';
 import { CardMakerComponent } from './components/card-maker/card-maker.component';
 import { TextToSpeachComponent } from './components/text-to-speach/text-to-speach.component';
 import { ConversorComponent } from './components/conversor/conversor.component';
+import { BuscarMusicaComponent } from './components/buscar-musica/buscar-musica.component';
 
 
 export const routes: Routes = [
@@ -10,4 +11,5 @@ export const routes: Routes = [
     {path: "cardMaker", component: CardMakerComponent},
     {path: "conversor", component: ConversorComponent},
     {path: "textToSpeach", component: TextToSpeachComponent},
+    {path: "buscarMusica", component: BuscarMusicaComponent},
 ];
