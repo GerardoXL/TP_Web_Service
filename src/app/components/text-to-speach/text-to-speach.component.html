@@ -1,1 +1,15 @@
-<p>text-to-speach works!</p>
+<div class="voces-container mt-4">
+    <select [(ngModel)]="voz" class="form-select" aria-label="Default select example">
+        <option value="" disabled>Menu de voces</option>
+        <option *ngFor="let v of voces"  [value]="v">{{v}}</option>
+    </select>
+</div>
+<div class="entrada-container mt-4 text-center">
+    <textarea [(ngModel)]="entrada" name="" id="" placeholder="Ingrese texto a traducir"></textarea>
+</div>
+<div class="button-container mt-3 text-center">
+    <button (click)="conversionAudio()" class="btn btn-outline-success">Convertir</button>
+</div>
+<div class="audio-container text-center">
+    <audio [src]="url" controls class="mt-4"></audio>
+</div>
