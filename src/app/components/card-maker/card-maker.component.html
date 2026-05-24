@@ -1,1 +1,35 @@
-<p>card-maker works!</p>
+<div class="lista-container col-md-8 col-lg-6 mt-5">
+    <ol class="list-group list-group-numbered">
+        <li class="list-group-item d-flex justify-content-between align-items-start" *ngFor="let m of marcas">
+            <div class="ms-2 me-auto">
+                <h6 class="fw-bold">Marca</h6>
+                <h5>{{m.name}} </h5>
+            </div>
+            <button (click)="cargarModelos(m.id,m.name)" class="btn btn-outline-success" data-bs-toggle="modal"
+                data-bs-target="#modelos">Ver Modelos</button>
+        </li>
+    </ol>
+</div>
+<!-- modal -->
+<div class="modal" tabindex="-1" id="modelos">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modelos de {{marcaSeleccionada}}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    <li *ngFor="let m of modelos">
+                        <p>{{m.name}}</p>
+                        <hr>
+                    </li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
