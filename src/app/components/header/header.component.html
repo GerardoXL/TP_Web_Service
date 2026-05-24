@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-lg ">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="/">
+				<span class="logo-text" style="font-weight: 500;">Peliculero</span>
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+				aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse gap-3 align-items-center" id="navbarNavDropdown">
+				<ul class="navbar-nav ms-auto">
+					<!-- <li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+							aria-expanded="false">
+							Destinos
+						</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">
+									<i class="fa-solid fa-sun"></i>
+									Norte</a>
+							</li>
+							<li><a class="dropdown-item" href="#">
+									<i class="fa-solid fa-person-skiing"></i>
+									Patagonia</a>
+							</li>
+							<li><a class="dropdown-item" href="./destinos.html">
+									<i class="fa-solid fa-ellipsis"></i>
+									Ver todos</a>
+							</li>
+						</ul>
+					</li> -->
+					<li class="nav-item">
+						<a [routerLink]="['peliculas']" routerLinkActive="active" class="nav-link">Peliculas</a>
+					</li>
+					<li class="nav-item">
+					<li class="nav-item">
+						<a [routerLink]="['cardMaker']" routerLinkActive="active" class="nav-link">CardMaker</a>
+					</li>
+					<li class="nav-item">
+						<a [routerLink]="['conversor']" routerLinkActive="active" class="nav-link">Conversor</a>
+					</li>
+					<li class="nav-item">
+						<a [routerLink]="['textToSpeach']" routerLinkActive="active" class="nav-link" >TextToSpeach</a>
+					</li>
+					<li class="nav-item">
+						<a [routerLink]="['cardMaker']" routerLinkActive="active" class="nav-link">Punto5</a>
+					</li>
+				</ul>
+				<ul class="container-sign mt-3 d-flex list-unstyled gap-3">
+					<li class="sign-item">
+						<a href="#" class="btn btn-outline-primary sign-in efecto-achicar"
+							style="text-decoration: none;">Entrar</a>
+					</li>
+					<li class="sign-item">
+						<a href="#" class="btn btn-primary sign-up efecto-achicar text-white"
+							style="text-decoration: none;">Registrarse</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>

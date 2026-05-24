@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-12 col-md-3 col-sm-6 mt-5 card-container" *ngFor="let p of peliculas">
+        <div class="card h-100" style="width: 18rem;">
+            <img [src]="p.image" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{p.title}} {{p.year}}</h5>
+                <h6>Calificacion: {{p.rating}} </h6>
+                <p class="card-text">Descripcion: {{p.description}}</p>
+                <div class="genero-container d-flex gap-2 flex-wrap">
+                    <span class="badge bg-dark rounded-pill" *ngFor="let g of p.genre">
+                        {{g}}
+                    </span>
+                </div>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Ranking: {{p.rank}}</li>
+            </ul>
+            <div class="card-body">
+                <a [href]="p.imdb_link" class="card-link" target="_blank">
+                    Ver en IMDB
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
