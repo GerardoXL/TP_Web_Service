@@ -1,8 +1,7 @@
-<div class="lista-container col-md-8 col-lg-6 mt-5">
+<div class="lista-container col-md-8 col-lg-6 mt-5 mx-auto">
     <ol class="list-group list-group-numbered">
         <li class="list-group-item d-flex justify-content-between align-items-start" *ngFor="let m of marcas">
             <div class="ms-2 me-auto">
-                <h6 class="fw-bold">Marca</h6>
                 <h5>{{m.name}} </h5>
             </div>
             <button (click)="cargarModelos(m.id,m.name)" class="btn btn-outline-success" data-bs-toggle="modal"
@@ -28,7 +27,6 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
             </div>
         </div>
     </div>

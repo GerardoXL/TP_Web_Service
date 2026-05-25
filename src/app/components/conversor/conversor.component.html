@@ -1,27 +1,31 @@
-<!-- <input type="number" placeholder="Ingrese cantidad"> -->
-<div class="input-group flex-nowrap mt-5">
-    <span class="input-group-text" id="addon-wrapping">$</span>
-    <input [(ngModel)]="cantidad" type="number" class="form-control" placeholder="Ingrese cantidad" aria-describedby="addon-wrapping">
-</div>
-<div class="origen-container mt-2">
-    <h6 class="title text-center">DE</h6>
-    <select class="form-select" aria-label="Default select example" [(ngModel)]="origen">
-        <option selected class="text-center">Moneda origen</option>
-        <option [value]="m.key" *ngFor="let m of moneda.currencies | keyvalue">
-            {{m.key}} : {{m.value}}
-        </option>
-    </select>
-</div>
-<div class="destino-container mt-2">
-    <h6 class="title text-center">A</h6>
-    <select class="form-select" aria-label="Default select example" [(ngModel)]="destino" >
-        <option selected class="text-center">Moneda destino</option>
-        <option [value]="m.key" *ngFor="let m of moneda.currencies | keyvalue">{{m.key}} : {{m.value}}</option>
-    </select>
-</div>
-<div class="button-container text-center mt-3">
-    <button (click)="conversion()" class="btn btn-outline-success" type="button">Convetir</button>
-</div>
-<div class="resultado-container mt-4">
-    <H5 class="text-center">{{convertido.result | currency}}</H5>
+<div class="container col-md-6 mx-auto mb-5 pt-5">
+    <div class="card p-4">
+        <div class="input-group flex-nowrap mt-5">
+            <span class="input-group-text" id="addon-wrapping">$</span>
+            <input [(ngModel)]="cantidad" type="number" class="form-control" placeholder="Ingrese cantidad"
+                aria-describedby="addon-wrapping">
+        </div>
+        <div class="origen-container mt-2">
+            <h6 class="title text-center">DE</h6>
+            <select class="form-select" aria-label="Default select example" [(ngModel)]="origen">
+                <option selected class="text-center">Moneda origen</option>
+                <option [value]="m.key" *ngFor="let m of moneda.currencies | keyvalue">
+                    {{m.key}} : {{m.value}}
+                </option>
+            </select>
+        </div>
+        <div class="destino-container mt-2">
+            <h6 class="title text-center">A</h6>
+            <select class="form-select" aria-label="Default select example" [(ngModel)]="destino">
+                <option selected class="text-center">Moneda destino</option>
+                <option [value]="m.key" *ngFor="let m of moneda.currencies | keyvalue">{{m.key}} : {{m.value}}</option>
+            </select>
+        </div>
+        <div class="button-container text-center mt-5 mb-4">
+            <button (click)="conversion()" class="btn btn-outline-success btn-lg" type="button">Convertir</button>
+        </div>
+        <div class="resultado-container mt-4 pt-5">
+            <H5 class="text-center">{{convertido.result | currency}}</H5>
+        </div>
+    </div>
 </div>

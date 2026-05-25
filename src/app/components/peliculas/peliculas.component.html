@@ -1,11 +1,20 @@
+<div class="container mt-5 mb-5">
+    <div class="titulo-container mt-3 pt-5">
+    <h1 class="title text-center">Peliculero</h1>
+    <h2 class="title text-center">Catalogo de Peliculas</h2>
+</div>
 <div class="row">
     <div class="col-12 col-md-3 col-sm-6 mt-5 card-container" *ngFor="let p of peliculas">
-        <div class="card h-100" style="width: 18rem;">
+        <div class="card w-100">
             <img [src]="p.image" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">{{p.title}} {{p.year}}</h5>
                 <h6>Calificacion: {{p.rating}} </h6>
-                <p class="card-text">Descripcion: {{p.description}}</p>
+                <p [ngClass]="{'descripcion-truncada' : !p.expandido}" class="card-text">Descripcion: {{p.description}}
+                </p>
+                <button (click)="expandir(p)" class="btn btn-link p-0">
+                    {{p.expandido ? 'Leer menos': 'Leer mas'}}
+                </button>
                 <div class="genero-container d-flex gap-2 flex-wrap">
                     <span class="badge bg-dark rounded-pill" *ngFor="let g of p.genre">
                         {{g}}
@@ -22,4 +31,5 @@
             </div>
         </div>
     </div>
+</div>
 </div>
